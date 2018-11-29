@@ -1,0 +1,24 @@
+{
+    "from" : 0, "size" : 10,
+    "_source": [ "name", "business_id","full_address","total_checkins" ],
+	"query":{
+//		"match_all": {}
+	  	"multi_match" : {
+	    "query":      "Benztek Performance",
+	    "type":       "best_fields",
+	    "fields":     [ "name", "full_address" ],
+	    "tie_breaker": 0.5
+	  }
+	},
+         "aggs": { 
+            "total": { 
+               "sum": {
+                  "field": "total_checkins" 
+               }
+            }
+         }
+    ,"sort": [
+     	{ "_score": { "order": "desc" }},
+        { "total_checkins": { "order": "desc"} }
+    ]
+}

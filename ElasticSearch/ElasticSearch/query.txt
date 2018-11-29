@@ -1,0 +1,35 @@
+{
+  "query": {
+    "match_all": {}
+  },
+  "aggs": {
+    "male": {
+      "filter": {
+        "term": {
+          "gender": "Male"
+        }
+      },
+      "aggs": {
+        "age_range": {
+          "terms": {
+            "field": "age_range"
+          }
+        }
+      }
+    },
+    "female": {
+      "filter": {
+        "term": {
+          "gender": "Female"
+        }
+      },
+      "aggs": {
+        "age_range": {
+          "terms": {
+            "field": "age_range"
+          }
+        }
+      }
+    }
+  }
+}

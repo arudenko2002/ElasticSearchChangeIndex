@@ -1,0 +1,21 @@
+{
+  "query": {
+    "match_all": {}
+  },
+  "aggs": {
+    "business": {
+      "filter": {
+        "term": {
+          "id": "business"
+        }
+      },
+      "aggs": {
+        "checkin_info": {
+          "terms": {
+            "field": "checkin_info"
+          }
+        }
+      }
+    }
+  }
+}

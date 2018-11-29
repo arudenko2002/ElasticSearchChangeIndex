@@ -1,0 +1,9 @@
+{
+  "script": {
+    "inline": "ctx._source['review_count'] = 4",
+    "lang": "painless"
+  },
+  "query": {
+    "match_all": {}
+  }
+}

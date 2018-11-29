@@ -1,0 +1,8 @@
+{
+    "from" : 0, "size" : 10,
+    //"_source": [ "_score","name", "business_id","full_address","checkin_info","script","total_checkins" ],
+    "query" : {
+       "match_all": {}
+       //"match":{"name":"Benztek Performance"}
+    }
+}

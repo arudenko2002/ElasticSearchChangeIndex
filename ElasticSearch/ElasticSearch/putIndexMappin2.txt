@@ -1,0 +1,20 @@
+{
+  "mappings": {
+    "business": { 
+      //"_all":       { "enabled": true  }, 
+      "dynamic": true,
+      "properties": { 
+        "business_id":    { "type": "string"  } 
+        ,"full_address":    { "type": "string"  }
+        ,"name":     { "type": "string"  }
+        ,"total_checkins":      { "type": "integer" }
+        ,"checkin_info": {
+        	"type":"nested",
+        	"properties": {
+                "name": {"type":"string"}
+            }
+          }
+        }
+     }
+  }
+}

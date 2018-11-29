@@ -1,0 +1,14 @@
+{
+  "source": {
+    "index": "alexey_rudenko_2017_07_10_index",
+    "type": "business"
+  },
+  "dest": {
+    "index": "alexey2_index",
+    "type": "business",
+    "op_type": "create"
+  },
+  "script": {
+    "inline": "ctx._type='business'"
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "script":{
+    	"inline999": "ctx._source.total_info=0;for (int i = 0; i < ctx._source.checkin_info.size(); ++i) { ctx._source.total_info=ctx._source.total_info + ctx._source.checkin_info[i];}",
+    	"lang":"painless"
+    }
+}
